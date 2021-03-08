@@ -11,7 +11,7 @@ public class ConnectingToDatabase {
 	private static final Logger LOGGER = LogManager.getLogger(ConnectingToDatabase.class);
 
 	public static void main(String[] args) {
-		try(Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/musicdb", "user", "password")) {
+		try(Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3308/musicdb", "user", "password")) {
 			LOGGER.info("Connnection established: " + conn.getCatalog());
 			LOGGER.info("Connnection established: " + conn.getMetaData().getDriverName());
 			LOGGER.info(conn.getTransactionIsolation());
